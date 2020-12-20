@@ -21,10 +21,12 @@ const reverse = ((mapObj) => {
     return monthSwap;
 });
 
+
 function monthStr(x) {
+    let newStr = x[0].toUpperCase() + x.slice(1);
     let arr = reverse(months)
-    if (arr.has(x)) { // проверяю есть ли вообще такой ключ
-        alert(arr.get(x))
+    if (arr.has(newStr)) { // проверяю есть ли вообще такой ключ
+        alert(arr.get(newStr))
     }
 }
 
